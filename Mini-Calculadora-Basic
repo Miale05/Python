@@ -1,0 +1,44 @@
+#Mini Calculadora
+
+#validando el Primer Numero
+primero = input("Ingrese el primer numero: ")
+
+try:
+    primero = int(primero)
+except:
+    primero = "error"
+
+if primero == "error":
+    print("El valor que ingresaste no es un entero")
+    exit()
+
+#validando el Segundo Numero
+segundo = input("Ingrese el segundo numero: ")
+
+try:
+    segundo = int(segundo)
+except:
+    segundo = "error"
+
+if segundo == "error":
+    print("El valor que ingresaste no es un numero")
+    exit()
+
+
+#validando Operacion
+simbolo = input("Ingrese simbolo de la operacion: ")
+
+lista = ["+", "-", "*", "/"]
+
+if lista.count(simbolo) > 0:
+    if simbolo == "+":
+        print("El Resultado es: ",primero + segundo)
+    elif simbolo == "-":
+        print("El Resultado es: ",primero - segundo)
+    elif simbolo == "*":
+        print("El Resultado es: ",primero * segundo)
+    elif simbolo == "/":
+        print("El Resultado es: ",primero / segundo)
+else:
+    print("No ingresaste una operacion valida, opciones =>", lista)
+    exit()
